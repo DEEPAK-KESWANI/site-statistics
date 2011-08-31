@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>config-workflow-stat</shortname>
+  <description>Configuration dialog for Workflow Statistics dashlet</description>
+  <url>/modules/dashlets/workflow-stat/config</url>
+</webscript>

@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>config-workflow-stat-handler</shortname>
+  <description>Config dialog form handler for Workflow Statistics dashlet</description>
+  <url>/modules/dashlets/workflow-stat/config/{componentId}</url>
+  <format default="json">argument</format>
+</webscript>
