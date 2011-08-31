@@ -64,9 +64,21 @@ public class AlfrescoUtils
 		if(typeOfcontent.equals(WebscriptContants.DOCUMENT_PATH)){
 			query.append("//*" + WebscriptContants.QUOTATION_MARK);
 			query.append(" AND ");
-			query.append(" - TYPE:\"cm:folder\"");
+			query.append(" + TYPE:\"cm:content\"");
 			query.append(" AND ");
 			query.append(" - TYPE:\"cm:thumbnail\"");
+			query.append(" AND ");
+			query.append(" - TYPE:\"cm:failedThumbnail\"");
+			query.append(" AND ");
+			query.append(" - TYPE:\"cm:systemfolder\"");
+			query.append(" AND ");
+			query.append(" - TYPE:\"fm:forums\"");
+			query.append(" AND ");
+			query.append(" - TYPE:\"fm:forum\"");
+			query.append(" AND ");
+			query.append(" - TYPE:\"fm:topic\"");
+			query.append(" AND ");
+			query.append(" - TYPE:\"fm:post\"");
 		}
 		else{
 			query.append("/*" + WebscriptContants.QUOTATION_MARK);
