@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Config Social Content Statistics Handler</shortname>
+  <description>Config dialog form handler for Social Content Statistics dashlet</description>
+  <url>/modules/dashlets/site-stat/config/{componentId}</url>
+  <format default="json">argument</format>
+</webscript>

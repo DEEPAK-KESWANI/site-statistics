@@ -1,0 +1,10 @@
+<webscript>
+  <shortname>Get Web Site Memberships</shortname>
+  <description>Get the members For a Site<br />
+   query is the  authority name for the memebers of the site.
+ </description>
+  <url>/ui/{shortName}/site-members?query={query}</url>
+  <authentication>user</authentication>
+  <format default="json"></format>
+  <transaction>none</transaction>
+</webscript>

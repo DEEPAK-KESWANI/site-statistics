@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+
+<beans>
+	<bean id="webscript.org.alfresco.webscripts.site-statistics.get"
+		class="org.alfresco.repo.web.scripts.webscripts.dashlets.SiteStatisticsWebScript"
+		parent="webscript">
+		<property name="workflowService">
+			<ref bean="WorkflowService" />
+		</property>
+		<property name="searchService">
+			<ref bean="SearchService" />
+		</property>
+		<property name="nodeService">
+			<ref bean="NodeService" />
+		</property>		
+	</bean>
+	
+	<bean id="webscript.org.alfresco.webscripts.site-members.get"
+		class="org.alfresco.repo.web.scripts.webscripts.dashlets.SiteMembersWebScript"
+		parent="webscript">
+		<property name="authorityService">
+			<ref bean="AuthorityService" />
+		</property>
+		<property name="siteService">
+			<ref bean="SiteService" />
+		</property>
+		<property name="permissionService">
+			<ref bean="PermissionService" />
+		</property>
+		<property name="searchService">
+			<ref bean="SearchService" />
+		</property>	
+	</bean>
+	
+	</beans>

@@ -1,0 +1,6 @@
+<webscript>
+   <shortname>Social Content Statistics</shortname>
+   <description>Component  used to show Social Content Statistics includes Documents,wiki,Blogs and Posts</description>
+   <url>/components/dashlets/site-stat</url>
+   <family>site-dashlet</family>
+</webscript>
