@@ -65,6 +65,8 @@ public class AlfrescoUtils
 			query.append("//*" + WebscriptContants.QUOTATION_MARK);
 			query.append(" AND ");
 			query.append(" - TYPE:\"cm:folder\"");
+			query.append(" AND ");
+			query.append(" - TYPE:\"cm:thumbnail\"");
 		}
 		else{
 			query.append("/*" + WebscriptContants.QUOTATION_MARK);
