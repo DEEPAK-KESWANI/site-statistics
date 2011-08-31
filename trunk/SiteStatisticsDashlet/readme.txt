@@ -13,7 +13,7 @@ The component has been developed to install on top of an existing Alfresco
 
 
 To build the JAR file, run the following command from the base project 
-directory.
+directory. Also specify the alfresco.sdk.dir location in build.properties.
 
     ant  dist-jar
 
