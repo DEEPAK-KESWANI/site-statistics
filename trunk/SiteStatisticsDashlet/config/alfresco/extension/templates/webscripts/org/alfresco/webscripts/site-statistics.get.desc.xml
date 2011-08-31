@@ -1,0 +1,10 @@
+<webscript>
+  <shortname>Get Social Content  Statistics</shortname>
+  <description>Gets the  Statistics For All/Specific User<br />
+   siteId is the  shortname for a site,user id  is the username ,start year is the starting year or current year, end year is the End Year for which statistics is required.
+  <br /></description>
+  <url>/ui/site-statistics?siteId={siteId?}&amp;userId={userId?}&amp;startYear={startYear?}&amp;endYear={endYear?}</url>
+  <authentication>user</authentication>
+  <format default="json"></format>
+  <transaction>none</transaction>
+</webscript>

@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>Configure Statistics Parameters</shortname>
+  <description>Configuration dialog for Social Content  Statistics dashlet</description>
+  <url>/modules/dashlets/site-stat/config</url>
+</webscript>

@@ -1,0 +1,36 @@
+<style type="text/css">
+	#chart
+	{
+		width: 500px;
+		height: 350px;
+	}
+
+	.chart_title
+	{
+		display: block;
+		font-size: 1.2em;
+		font-weight: bold;
+		margin-bottom: 0.4em;
+	}
+	
+	      .filter_label 
+      {
+        font-weight:bold;
+        font-size: 13px;
+        color: #333333;       
+      }
+      
+      .filter_value 
+      {
+      font-size: 13px;
+      color: #333333;  
+      }
+      
+      .filterData 
+      {
+            padding:5px 5px 5px 0px; 
+            border-bottom:1px dashed #D3D3D3;
+      }
+
+	
+</style>
