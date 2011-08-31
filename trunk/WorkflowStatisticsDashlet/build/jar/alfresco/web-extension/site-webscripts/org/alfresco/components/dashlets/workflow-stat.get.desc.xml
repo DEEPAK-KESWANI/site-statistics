@@ -1,0 +1,6 @@
+<webscript>
+   <shortname>Workflow Statistics</shortname>
+   <description>Viewing Workflow Status</description>
+   <url>/components/dashlets/workflow-stat</url>
+   <family>user-dashlet</family>
+</webscript>
