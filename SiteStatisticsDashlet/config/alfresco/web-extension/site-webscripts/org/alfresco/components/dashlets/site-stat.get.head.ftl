@@ -13,7 +13,7 @@
 <script type="text/javascript" src="${page.url.context}/res/yui/connection/connection-min.js"></script>
 <script type="text/javascript" src="${page.url.context}/res/yui/autocomplete/autocomplete-min.js"></script>
 <link rel="stylesheet" type="text/css" href="${page.url.context}/res/yui/autocomplete/assets/skins/sam/autocomplete.css" />
-
+<script src="${page.url.context}/res/yui/cookie/cookie-min.js"></script>
 <!-- Site Statistics dashlet -->
 <@script type="text/javascript" src="${page.url.context}/res/modules/extension/site-stat-config.js"></@script>
 <@script type="text/javascript" src="${page.url.context}/res/components/dashlets/extension/site-stat.js"></@script> 
