@@ -4,6 +4,7 @@
     * YUI Library aliases
     */
    var Dom = YAHOO.util.Dom,
+       Cookie = YAHOO.util.Cookie,
       Event = YAHOO.util.Event;
 
    /**
@@ -47,7 +48,7 @@
           * @type string
           * @default current Logged-In User
           */
-         userId: Alfresco.constants.USERNAME,
+         userId: "",
          /**
           * The startYear , used to filter the statistics
           *
@@ -74,9 +75,28 @@
        onReady: function WorkflowStatistics_onReady()
        {
             Event.addListener(this.id + "-configure-link", "click", this.onConfigClick, this, true);
-            var date = new Date();
-            this.options.startYear = date.getFullYear();
-            this.options.endYear = date.getFullYear();
+            if(Cookie.get("userId") == null || Cookie.get("userId") == "")
+            { 
+                  this.options.userId = Alfresco.constants.USERNAME ;
+            } 
+            else 
+            {
+                  this.options.userId = Cookie.get("userId");
+            }     
+           
+            if( (Cookie.get("startYear") == null || Cookie.get("startYear") == "")
+                  || (Cookie.get("endYear") == null || Cookie.get("endYear") == "") )
+            { 
+                  var date = new Date();
+                  this.options.startYear = date.getFullYear();
+                  this.options.endYear = date.getFullYear();
+            } 
+            else 
+            {
+                  this.options.startYear =Cookie.get("startYear");
+                  this.options.endYear = Cookie.get("endYear");
+            }
+
             this.refreshTitle();
             this.chartHandler();
        },
@@ -118,6 +138,10 @@
                        this.options.userId = response.json.data.userId;
                        this.options.startYear = response.json.data.startYear;
                        this.options.endYear = response.json.data.endYear;
+                       Cookie.set("userId", this.options.userId);             
+                       Cookie.set("startYear", this.options.startYear);       
+                       Cookie.set("endYear", this.options.endYear);  
+
                        //Refreshing labels for User and Year based on data entered
                        this.refreshTitle();
                        //For preparing Charts
