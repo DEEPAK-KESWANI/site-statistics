@@ -12,7 +12,7 @@
 <script type="text/javascript" src="${page.url.context}/res/yui/datasource/datasource-min.js"></script>
 <script type="text/javascript" src="${page.url.context}/res/yui/connection/connection-min.js"></script>
 <script type="text/javascript" src="${page.url.context}/res/yui/autocomplete/autocomplete-min.js"></script>
-
+<script src="${page.url.context}/res/yui/cookie/cookie-min.js"></script>
 <!-- workflow Statistics dashlet -->
 <@script type="text/javascript" src="${page.url.context}/res/modules/extension/workflow-stat-config.js"></@script>
 
