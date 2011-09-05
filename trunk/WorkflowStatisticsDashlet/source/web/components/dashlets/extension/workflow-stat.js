@@ -75,19 +75,14 @@
        onReady: function WorkflowStatistics_onReady()
        {
             Event.addListener(this.id + "-configure-link", "click", this.onConfigClick, this, true);
-            if(Cookie.get("customJsessionId") != Cookie.get("JSESSIONID"))
+            if(this.options.userId == "")
             {
-                  this.options.userId = Alfresco.constants.USERNAME ;
-                  var date = new Date();
-                  this.options.startYear = date.getFullYear();
-                  this.options.endYear = date.getFullYear();
-            } 
-            else
-            {
-                this.options.userId = Cookie.get("userId");
-                this.options.startYear =Cookie.get("startYear");
-                this.options.endYear = Cookie.get("endYear");
-            }
+                this.options.userId = Alfresco.constants.USERNAME ;
+                var date = new Date();
+                this.options.startYear = date.getFullYear();
+                this.options.endYear = date.getFullYear();
+          }
+
 
             this.refreshTitle();
             this.chartHandler();
@@ -131,10 +126,6 @@
                        this.options.userId = response.json.data.userId;
                        this.options.startYear = response.json.data.startYear;
                        this.options.endYear = response.json.data.endYear;
-                       Cookie.set("userId", this.options.userId);             
-                       Cookie.set("startYear", this.options.startYear);       
-                       Cookie.set("endYear", this.options.endYear);  
-                       Cookie.set("customJsessionId", Cookie.get("JSESSIONID"));  
                        //Refreshing labels for User and Year based on data entered
                        this.refreshTitle();
                        //For preparing Charts
