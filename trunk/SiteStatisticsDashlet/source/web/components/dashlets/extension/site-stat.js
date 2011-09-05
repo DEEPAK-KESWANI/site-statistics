@@ -84,28 +84,19 @@
        {
            
             Event.addListener(this.id + "-configure-link", "click", this.onConfigClick, this, true);
-            if(Cookie.get("userId") == null || Cookie.get("userId") == "")
-            { 
-                  this.options.userId = Alfresco.constants.USERNAME ;
-            } 
-            else 
+            if(Cookie.get("customJsessionId") != Cookie.get("JSESSIONID"))
             {
-                  this.options.userId = Cookie.get("userId");
-            }     
-           
-            if( (Cookie.get("startYear") == null || Cookie.get("startYear") == "")
-                  || (Cookie.get("endYear") == null || Cookie.get("endYear") == "") )
-            { 
+                  this.options.userId = Alfresco.constants.USERNAME ;
                   var date = new Date();
                   this.options.startYear = date.getFullYear();
                   this.options.endYear = date.getFullYear();
             } 
-            else 
+            else
             {
-                  this.options.startYear =Cookie.get("startYear");
-                  this.options.endYear = Cookie.get("endYear");
+                this.options.userId = Cookie.get("userId");
+                this.options.startYear =Cookie.get("startYear");
+                this.options.endYear = Cookie.get("endYear");
             }
-
             this.refreshTitle();
             this.chartHandler();
          
@@ -151,7 +142,7 @@
                        Cookie.set("userId", this.options.userId);             
                        Cookie.set("startYear", this.options.startYear);       
                        Cookie.set("endYear", this.options.endYear);  
-
+                       Cookie.set("customJsessionId", Cookie.get("JSESSIONID"));  
                        //Refreshing labels for User and Year based on data entered
                        this.refreshTitle();
                        //Populating Stacked Bar Charts.
