@@ -1,8 +1,10 @@
 <script type="text/javascript">//<![CDATA[
 new Alfresco.dashlet.WorkflowStatistics("${args.htmlid}").setOptions(
 		{
-			"componentId": "${instance.object.id}"
-
+			"componentId": "${instance.object.id}",
+			"userId": "${args.userId!''}",
+                         "startYear": "${args.startYear!''}",
+                           "endYear": "${args.endYear!''}"
 		});
  new Alfresco.dashlet.WorkflowStatConfigDialog("${args.htmlid}").setOptions(
    {
